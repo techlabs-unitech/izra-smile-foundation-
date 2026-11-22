@@ -21,7 +21,7 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    const updateActiveHref = () => setActiveHref(window.location.hash);
+    const updateActiveHref = () => setActiveHref(window.location.pathname === "/" ? `/${window.location.hash}` : window.location.pathname);
     updateActiveHref();
     window.addEventListener("hashchange", updateActiveHref);
     return () => window.removeEventListener("hashchange", updateActiveHref);
@@ -92,9 +92,9 @@ export function Navbar() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <Link
-              href="#donate"
-              aria-current={activeHref === "#donate" ? "location" : undefined}
-              onClick={() => setActiveHref("#donate")}
+              href="/#donate"
+              aria-current={activeHref === "/#donate" ? "location" : undefined}
+              onClick={() => setActiveHref("/#donate")}
               className="inline-flex items-center gap-2 rounded-full bg-sky-700 px-5 py-3 text-sm font-semibold text-white shadow-[0_18px_35px_rgba(14,63,104,0.2)] transition hover:-translate-y-0.5 hover:bg-sky-800"
             >
               DONATE
@@ -134,10 +134,10 @@ export function Navbar() {
               </Link>
             ))}
             <Link
-              href="#donate"
-              aria-current={activeHref === "#donate" ? "location" : undefined}
+              href="/#donate"
+              aria-current={activeHref === "/#donate" ? "location" : undefined}
               onClick={() => {
-                setActiveHref("#donate");
+                setActiveHref("/#donate");
                 setIsOpen(false);
                 menuButtonRef.current?.focus();
               }}

@@ -5,14 +5,14 @@ import { siteImages } from "@/data/images";
 import { contactDetails } from "@/data/site";
 
 const quickLinks = [
-  { label: "About", href: "#about" },
-  { label: "Our Work", href: "#support" },
-  { label: "Impact", href: "#impact" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "About", href: "/#about" },
+  { label: "Our Work", href: "/#support" },
+  { label: "Impact", href: "/#impact" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Transparency", href: "/transparency" },
-  { label: "Get Involved", href: "#involved" },
-  { label: "Donate", href: "#donate" },
-  { label: "Contact", href: "#contact" },
+  { label: "Get Involved", href: "/#involved" },
+  { label: "Donate", href: "/#donate" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Footer() {
@@ -70,7 +70,7 @@ export function Footer() {
 
           <div className="flex items-center lg:justify-end">
             <Link
-              href="#donate"
+              href="/#donate"
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-sky-50"
             >
               Donate

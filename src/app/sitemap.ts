@@ -10,5 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: new URL("/", siteUrl).toString(),
       priority: 1,
     },
+    {
+      url: new URL("/gallery", siteUrl).toString(),
+      priority: 0.8,
+    },
   ];
 }

@@ -40,15 +40,15 @@ export type GalleryItem = {
 };
 
 export const navItems: NavItem[] = [
-  { label: "About", href: "#about" },
-  { label: "Vision", href: "#vision" },
-  { label: "Our Work", href: "#support" },
-  { label: "Programs", href: "#programs" },
-  { label: "Impact", href: "#impact" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "About", href: "/#about" },
+  { label: "Vision", href: "/#vision" },
+  { label: "Our Work", href: "/#support" },
+  { label: "Programs", href: "/#programs" },
+  { label: "Impact", href: "/#impact" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Transparency", href: "/transparency" },
-  { label: "Get Involved", href: "#involved" },
-  { label: "Contact", href: "#contact" },
+  { label: "Get Involved", href: "/#involved" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const supportAreas: SupportArea[] = [
@@ -210,6 +210,33 @@ export const galleryItems: GalleryItem[] = [
   { src: "/images/WhatsApp Image 2026-10-01 at 9.37.11 AM.jpeg", alt: "Women taking part in a social welfare program", title: "Health and dignity" },
   { src: "/images/WhatsApp Image 2026-10-01 at 9.37.09 AM.jpeg", alt: "Children gathered in a support and learning environment", title: "Care and learning" },
 ];
+
+const foodDistributionPath = "/images/gallery/weekly-food-distribution";
+
+export const foodDistributionAlbum = {
+  eyebrow: "Weekly Food Distribution",
+  title: "Sharing Hope, Spreading Smiles.",
+  description: [
+    "At Izra Smile Foundation, we believe that no one should go hungry. Every week, our dedicated team visits underprivileged communities and slum areas to distribute food among families and children in need.",
+    "Our weekly food distribution initiative is more than just providing meals; it is about spreading kindness, sharing happiness, and bringing hope to those who need it most.",
+    "We are committed to continuing this mission every week because we believe that every person deserves food, care, and dignity.",
+  ],
+  items: [
+    { src: `${foodDistributionPath}/food-distribution-01.webp`, alt: "Volunteers handing packed meals to a man and a woman beside stacked firewood", title: "Meals shared with care" },
+    { src: `${foodDistributionPath}/food-distribution-02.webp`, alt: "Volunteers handing a meal to a man under a tin-roofed shelter", title: "Doorstep delivery" },
+    { src: `${foodDistributionPath}/food-distribution-03.webp`, alt: "A volunteer giving a packed meal to an elderly woman seated by a block wall", title: "A meal for an elder" },
+    { src: `${foodDistributionPath}/food-distribution-04.webp`, alt: "A volunteer handing a meal tray to a woman in a yellow saree", title: "Sharing a warm meal" },
+    { src: `${foodDistributionPath}/food-distribution-05.webp`, alt: "Children eating their meals while a smiling volunteer sits beside them", title: "Lunch together" },
+    { src: `${foodDistributionPath}/food-distribution-06.webp`, alt: "A volunteer carrying meal packs at the doorway of a home", title: "Visiting every home" },
+    { src: `${foodDistributionPath}/food-distribution-07.webp`, alt: "Volunteers with elderly women and a child holding their meals", title: "Together with the community" },
+    { src: `${foodDistributionPath}/food-distribution-08.webp`, alt: "Volunteers handing meal trays to women near buildings under construction", title: "Reaching every family" },
+    { src: `${foodDistributionPath}/food-distribution-09.webp`, alt: "Children and a woman gathering as volunteers hand out meals", title: "Children gather around" },
+    { src: `${foodDistributionPath}/food-distribution-10.webp`, alt: "Children lining up as volunteers distribute food from a motorbike", title: "Waiting their turn" },
+    { src: `${foodDistributionPath}/food-distribution-11.webp`, alt: "A young girl waiting as volunteers pass meals to children", title: "Hope in every hand" },
+    { src: `${foodDistributionPath}/food-distribution-12.webp`, alt: "A smiling volunteer packing meals for children", title: "Smiles all around" },
+    { src: `${foodDistributionPath}/food-distribution-13.webp`, alt: "Volunteers handing out meals as children gather around", title: "Every week, every child" },
+  ] satisfies GalleryItem[],
+};
 
 export type ImpactStat = {
   value: number;
